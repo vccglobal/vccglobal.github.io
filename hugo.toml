@@ -27,8 +27,8 @@ buildExpired = false
 [params]
   env = 'production'
   title = 'globalvcc'
-  description = '个人技术博客'
-  keywords = ['blog', 'hugo']
+  description = 'Coinepay —— 虚拟信用卡、TRX 能量租赁、全球跨境汇款与 API 对接'
+  keywords = ['虚拟信用卡', 'TRX能量租赁', '跨境汇款', 'Coinepay', 'USDT']
   DateFormat = '2006-01-02'
   defaultTheme = 'auto'      # auto / light / dark
   disableThemeToggle = false
@@ -47,8 +47,25 @@ buildExpired = false
   comments = false
 
   [params.homeInfoParams]
-    Title = '你好 👋'
-    Content = '欢迎来到我的博客。'
+    Title = 'Coinepay · 一站式跨境支付'
+    Content = '''
+虚拟信用卡 · TRX 能量租赁 · 全球跨境汇款 · API 对接
+
+- **虚拟信用卡** —— 订阅 ChatGPT、Claude 等 AI 服务，投放 Facebook、Google、TikTok 广告，开通 YouTube、Netflix 会员。支持多币种结算，实时充值，即开即用。
+- **TRX 能量租赁** —— USDT-TRC20 转账手续费太贵？租能量最低 1.5 TRX 起，免注册也能下单，批量转账可接 API。
+- **全球跨境汇款** —— 学费、货款、服务费用，多币种收付，付款记录集中管理。
+- **API 对接** —— 批量开卡、自动租能量，商户与交易所可直接接入。
+
+**联系我们** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[params.socialIcons]]
+    name = 'telegram'
+    url = 'https://t.me/coinepay_jas'
+
+  [[params.socialIcons]]
+    name = 'whatsapp'
+    url = 'https://wa.me/message/2I3GXEELDVMHP1'
 
   [[params.socialIcons]]
     name = 'github'
