@@ -1,0 +1,55 @@
+# English promo blocks shown inside article pages.
+# Edit this file only — no need to touch the HTML/CSS.
+# enable: false turns off every promo block across the English site.
+enable: true
+
+# ── Where each block is placed ────────────────
+#   after-intro = before the first subheading (highest visibility)
+#   middle      = mid-article (reader is engaged)
+#   end         = end of article (strongest intent to convert)
+#   off         = disable this block
+# If the article has too few subheadings, inline blocks fall back to the end.
+placement:
+  card: after-intro
+  energy: middle
+  contact: end
+
+# Small tag in the top-right corner; use "" to hide it
+badge: "Sponsored"
+
+# ── Block 1: get a card ───────────────────────
+card:
+  title: "Coinepay Virtual Cards · One Card, Paid Worldwide"
+  body: "Subscribe to ChatGPT, Claude and other AI services, run Facebook, Google and TikTok ad accounts, sign up for YouTube and Netflix, and send money across borders — all from a single card. Multi-currency settlement, real-time top-ups, usable the moment it is issued."
+  cta:
+    label: "Get a card →"
+    url: "https://www.coinepay.net/login?referrer=7YDCLP"
+
+# ── Block 2: contact ──────────────────────────
+contact:
+  title: "Talk to us"
+  body: "Questions about cards, top-ups or remittance? A real person will pick it up."
+  links:
+    - icon: "✈"
+      label: "Telegram group"
+      url: "https://t.me/coinepay3"
+    - icon: "💬"
+      label: "Live support"
+      url: "https://chat.ssrchat.com/service/grpect"
+    - icon: "💳"
+      label: "Open the card platform"
+      url: "https://www.coinepay.net/login?referrer=7YDCLP"
+      primary: true                            # rendered as the main button
+
+# ── Block 3: energy rental ────────────────────
+energy:
+  icon: "⚡"
+  title: "TRC20 transfer fees too high? Rent energy instead"
+  points:
+    - "Every USDT-TRC20 transfer burns <b>13–27 TRX</b> when you are short on energy — the cost depends on the number of transfers, not the amount sent."
+    - "Renting energy starts at <b>1.5–1.7 TRX</b> for 65,000 energy (enough for one transfer to an address that already holds USDT). If the receiving address is empty, you need 130,000 energy, roughly <b>3.0–3.4 TRX</b>."
+    - "No account needed: send TRX to the platform address and the energy is delegated back to your sending address automatically."
+    - "Batch transfers, exchanges and merchants can automate rental through the API."
+  cta:
+    label: "Rent energy"
+    url: "https://login.trxapi.io/energy"

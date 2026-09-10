@@ -1,15 +1,21 @@
 # Pages CMS 配置 —— https://pagescms.org/docs/configuration/
 # 后台地址：https://app.pagescms.org
+#
+# 站点是中英双语（Hugo multilingual）：
+#   中文 content/zh/posts → https://vccglobal.github.io/posts/...
+#   英文 content/en/posts → https://vccglobal.github.io/en/posts/...
+# 两边内容互相独立，分类各写各的，不需要一一对应。
 
 media:
   input: static/images    # 图片实际存放位置（仓库内）
   output: /images         # 写进文章里的图片 URL 前缀
 
 content:
-  - name: posts
-    label: 文章
+  # ── 中文文章 ──────────────────────────────
+  - name: posts_zh
+    label: 中文文章
     type: collection
-    path: content/posts
+    path: content/zh/posts
     format: yaml-frontmatter    # 对应 Hugo 的 --- YAML front matter
     # 文件名模板：用「英文别名」字段，不带日期前缀。
     # 注意不能用 {title}：Pages CMS 对标题做 slugify(strict) 会剥掉全部中文，
@@ -55,6 +61,58 @@ content:
         list: true
       - name: body
         label: 正文
+        type: rich-text
+        options:
+          format: markdown
+
+  # ── 英文文章 ──────────────────────────────
+  # 与中文栏目完全独立：分类、标签自己一套，不必是中文的翻译。
+  - name: posts_en
+    label: English Posts
+    type: collection
+    path: content/en/posts
+    format: yaml-frontmatter
+    filename: "{fields.slug}.md"
+    exclude:
+      - _index.md
+    view:
+      fields: [title, date, draft, categories]
+      primary: title
+      sort: [date, title]
+      search: [title, categories, tags]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: Slug (defines the URL — lowercase letters and hyphens only)
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: "Lowercase letters, digits and hyphens only, e.g. virtual-cards-for-ai-subscriptions"
+      - name: date
+        label: Publish date
+        type: date
+        required: true
+      - name: draft
+        label: Save as draft (not published to the live site)
+        type: boolean
+        default: false
+      - name: categories
+        label: Categories
+        type: string
+        list: true
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: body
+        label: Body
         type: rich-text
         options:
           format: markdown

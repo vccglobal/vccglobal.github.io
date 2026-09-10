@@ -1,8 +1,11 @@
 baseURL = 'https://vccglobal.github.io/'
-languageCode = 'zh-cn'
-defaultContentLanguage = 'zh'
-title = 'globalvcc'
 theme = 'PaperMod'
+
+# ── 多语言 ────────────────────────────────────
+# defaultContentLanguageInSubdir = false ⇒ 中文在站点根目录（/posts/...），
+# 英文在 /en/ 下（/en/posts/...）。原有中文链接保持不变，不会 404。
+defaultContentLanguage = 'zh'
+defaultContentLanguageInSubdir = false
 
 enableRobotsTXT = true
 enableEmoji = true
@@ -18,17 +21,17 @@ buildExpired = false
   minifyOutput = true
 
 [outputs]
-  home = ['HTML', 'RSS', 'JSON']   # JSON 供站内搜索使用
+  home = ['HTML', 'RSS', 'JSON']   # JSON 供站内搜索使用（每种语言各生成一份）
 
+# 分类/标签的「词条」来自每篇文章的 front matter，因此中英文分类天然独立：
+# /categories/ 只列中文分类，/en/categories/ 只列英文分类。
 [taxonomies]
   category = 'categories'
   tag = 'tags'
 
+# ── 全站通用参数（会被各语言的 params 覆盖/补充）──
 [params]
   env = 'production'
-  title = 'globalvcc'
-  description = 'Coinepay —— 虚拟信用卡、TRX 能量租赁、全球跨境汇款与 API 对接'
-  keywords = ['虚拟信用卡', 'TRX能量租赁', '跨境汇款', 'Coinepay', 'USDT']
   DateFormat = '2006-01-02'
   defaultTheme = 'auto'      # auto / light / dark
   disableThemeToggle = false
@@ -45,19 +48,6 @@ buildExpired = false
   hidemeta = false
   hideSummary = false
   comments = false
-
-  [params.homeInfoParams]
-    Title = 'Coinepay · 一站式跨境支付'
-    Content = '''
-虚拟信用卡 · TRX 能量租赁 · 全球跨境汇款 · API 对接
-
-- **虚拟信用卡** —— 订阅 ChatGPT、Claude 等 AI 服务，投放 Facebook、Google、TikTok 广告，开通 YouTube、Netflix 会员。支持多币种结算，实时充值，即开即用。
-- **TRX 能量租赁** —— USDT-TRC20 转账手续费太贵？租能量最低 1.5 TRX 起，免注册也能下单，批量转账可接 API。
-- **全球跨境汇款** —— 学费、货款、服务费用，多币种收付，付款记录集中管理。
-- **API 对接** —— 批量开卡、自动租能量，商户与交易所可直接接入。
-
-**联系我们** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
-'''
 
   [[params.socialIcons]]
     name = 'telegram'
@@ -84,35 +74,108 @@ buildExpired = false
     minMatchCharLength = 0
     keys = ['title', 'permalink', 'summary', 'content']
 
-[[menu.main]]
-  identifier = 'posts'
-  name = '文章'
-  url = '/posts/'
-  weight = 10
+# ══ 中文 ══════════════════════════════════════
+[languages.zh]
+  locale = 'zh-CN'
+  label = '中文'
+  contentDir = 'content/zh'
+  weight = 1
+  title = 'globalvcc'
 
-[[menu.main]]
-  identifier = 'archives'
-  name = '归档'
-  url = '/archives/'
-  weight = 20
+  [languages.zh.params]
+    description = 'Coinepay —— 虚拟信用卡、TRX 能量租赁、全球跨境汇款与 API 对接'
+    keywords = ['虚拟信用卡', 'TRX能量租赁', '跨境汇款', 'Coinepay', 'USDT']
 
-[[menu.main]]
-  identifier = 'categories'
-  name = '分类'
-  url = '/categories/'
-  weight = 30
+    [languages.zh.params.homeInfoParams]
+      Title = 'Coinepay · 一站式跨境支付'
+      Content = '''
+虚拟信用卡 · TRX 能量租赁 · 全球跨境汇款 · API 对接
 
-[[menu.main]]
-  identifier = 'tags'
-  name = '标签'
-  url = '/tags/'
-  weight = 40
+- **虚拟信用卡** —— 订阅 ChatGPT、Claude 等 AI 服务，投放 Facebook、Google、TikTok 广告，开通 YouTube、Netflix 会员。支持多币种结算，实时充值，即开即用。
+- **TRX 能量租赁** —— USDT-TRC20 转账手续费太贵？租能量最低 1.5 TRX 起，免注册也能下单，批量转账可接 API。
+- **全球跨境汇款** —— 学费、货款、服务费用，多币种收付，付款记录集中管理。
+- **API 对接** —— 批量开卡、自动租能量，商户与交易所可直接接入。
 
-[[menu.main]]
-  identifier = 'search'
-  name = '搜索'
-  url = '/search/'
-  weight = 50
+**联系我们** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  # 菜单 URL 写站内相对路径即可，PaperMod 用 absLangURL 自动加语言前缀
+  [[languages.zh.menu.main]]
+    identifier = 'posts'
+    name = '文章'
+    url = '/posts/'
+    weight = 10
+  [[languages.zh.menu.main]]
+    identifier = 'archives'
+    name = '归档'
+    url = '/archives/'
+    weight = 20
+  [[languages.zh.menu.main]]
+    identifier = 'categories'
+    name = '分类'
+    url = '/categories/'
+    weight = 30
+  [[languages.zh.menu.main]]
+    identifier = 'tags'
+    name = '标签'
+    url = '/tags/'
+    weight = 40
+  [[languages.zh.menu.main]]
+    identifier = 'search'
+    name = '搜索'
+    url = '/search/'
+    weight = 50
+
+# ══ English ═══════════════════════════════════
+[languages.en]
+  locale = 'en'
+  label = 'English'
+  contentDir = 'content/en'
+  weight = 2
+  title = 'Coinepay'
+
+  [languages.en.params]
+    description = 'Coinepay — virtual credit cards, TRX energy rental, global remittance and payment APIs'
+    keywords = ['virtual credit card', 'TRX energy rental', 'global remittance', 'Coinepay', 'USDT']
+
+    [languages.en.params.homeInfoParams]
+      Title = 'Coinepay · Cross-Border Payments, One Platform'
+      Content = '''
+Virtual Credit Cards · TRX Energy Rental · Global Remittance · Payment APIs
+
+- **Virtual Credit Cards** —— Pay for ChatGPT, Claude and other AI services, run Facebook, Google and TikTok ad accounts, subscribe to YouTube and Netflix. Multi-currency settlement, real-time top-ups, usable the moment they are issued.
+- **TRX Energy Rental** —— USDT-TRC20 transfer fees too high? Rent energy from 1.5 TRX, order without registering, or connect the API for batch transfers.
+- **Global Remittance** —— Tuition, supplier invoices and service fees, paid in multiple currencies with every record in one place.
+- **Payment APIs** —— Bulk card issuance and automated energy rental for merchants and exchanges.
+
+**Get in touch** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.en.menu.main]]
+    identifier = 'posts'
+    name = 'Posts'
+    url = '/posts/'
+    weight = 10
+  [[languages.en.menu.main]]
+    identifier = 'archives'
+    name = 'Archives'
+    url = '/archives/'
+    weight = 20
+  [[languages.en.menu.main]]
+    identifier = 'categories'
+    name = 'Categories'
+    url = '/categories/'
+    weight = 30
+  [[languages.en.menu.main]]
+    identifier = 'tags'
+    name = 'Tags'
+    url = '/tags/'
+    weight = 40
+  [[languages.en.menu.main]]
+    identifier = 'search'
+    name = 'Search'
+    url = '/search/'
+    weight = 50
 
 [markup.highlight]
   noClasses = false
