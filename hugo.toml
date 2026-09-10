@@ -80,7 +80,7 @@ buildExpired = false
   label = '中文'
   contentDir = 'content/zh'
   weight = 1
-  title = 'globalvcc'
+  title = 'vccglobal'
 
   [languages.zh.params]
     description = 'Coinepay —— 虚拟信用卡、TRX 能量租赁、全球跨境汇款与 API 对接'
@@ -132,7 +132,7 @@ buildExpired = false
   label = 'English'
   contentDir = 'content/en'
   weight = 2
-  title = 'Coinepay'
+  title = 'vccglobal'
 
   [languages.en.params]
     description = 'Coinepay — virtual credit cards, TRX energy rental, global remittance and payment APIs'
