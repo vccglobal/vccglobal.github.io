@@ -1,7 +1,7 @@
 {{- /* 语言切换器：头部文字触发 + 按语区分组的多列下拉面板。
        分组来自各语言的 params.langGroup（见 hugo.toml），
        分组标题来自 i18n/<语言>.yaml 的 langGroupXx 键。
-       用 <details> 实现，禁用 JS 也能展开；末尾脚本只负责点外部时收起。
+       用 <details> 实现，禁用 JS 也能展开；点外部收起的脚本在 extend_footer.html。
        样式在 assets/css/extended/lang-switch.css。 */ -}}
 
 {{- $cur := site.Language.Lang -}}
@@ -69,16 +69,4 @@
   </div>
 </details>
 
-<script>
-  (function () {
-    var d = document.currentScript.previousElementSibling;
-    if (!d || d.tagName !== 'DETAILS') return;
-    document.addEventListener('click', function (e) {
-      if (d.open && !d.contains(e.target)) d.open = false;
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); }
-    });
-  })();
-</script>
 {{- end -}}
