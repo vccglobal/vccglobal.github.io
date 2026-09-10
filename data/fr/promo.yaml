@@ -1,0 +1,45 @@
+# Français —— 文章页推广位文案。改这个文件即可，不用动 HTML/CSS。
+# enable: false 可一键关掉本语言的全部推广位。
+# 投放位置：after-intro 开头 / middle 中部 / end 文末 / off 关闭
+enable: true
+
+placement:
+  card: after-intro
+  energy: middle
+  contact: end
+
+badge: "Sponsorisé"
+
+card:
+  title: "Cartes virtuelles Coinepay · Une seule carte pour payer partout"
+  body: "Abonnez-vous à ChatGPT, Claude et d’autres services d’IA, diffusez des publicités sur Facebook, Google et TikTok, activez YouTube et Netflix, et envoyez de l’argent à l’international : le tout avec une seule carte. Règlement multidevise, recharges en temps réel, utilisable dès l’émission."
+  cta:
+    label: "Obtenir une carte →"
+    url: "https://www.coinepay.net/login?referrer=7YDCLP"
+
+contact:
+  title: "Contactez-nous"
+  body: "Une question sur l’émission, les recharges ou les transferts ? Une personne réelle vous répond."
+  links:
+    - icon: "✈"
+      label: "Groupe Telegram"
+      url: "https://t.me/coinepay3"
+    - icon: "💬"
+      label: "Assistance en direct"
+      url: "https://chat.ssrchat.com/service/grpect"
+    - icon: "💳"
+      label: "Accéder à la plateforme"
+      url: "https://www.coinepay.net/login?referrer=7YDCLP"
+      primary: true
+
+energy:
+  icon: "⚡"
+  title: "Frais de transfert TRC20 trop élevés ? Louez de l’énergie"
+  points:
+    - "Chaque transfert USDT-TRC20 consomme <b>13 à 27 TRX</b> lorsque votre énergie est insuffisante : le coût dépend du nombre de transferts, pas du montant envoyé."
+    - "La location d’énergie démarre à <b>1,5–1,7 TRX</b> pour 65 000 d’énergie (de quoi effectuer un transfert vers une adresse détenant déjà des USDT). Si l’adresse destinataire est vide, il vous faudra 130 000 d’énergie, soit environ <b>3,0–3,4 TRX</b>."
+    - "Sans inscription : envoyez des TRX à l’adresse de la plateforme et l’énergie est automatiquement déléguée à votre adresse d’envoi."
+    - "Transferts groupés, plateformes d’échange et marchands peuvent automatiser la location via l’API."
+  cta:
+    label: "Louer de l’énergie"
+    url: "https://login.trxapi.io/energy"

@@ -1,0 +1,45 @@
+# 日本語 —— 文章页推广位文案。改这个文件即可，不用动 HTML/CSS。
+# enable: false 可一键关掉本语言的全部推广位。
+# 投放位置：after-intro 开头 / middle 中部 / end 文末 / off 关闭
+enable: true
+
+placement:
+  card: after-intro
+  energy: middle
+  contact: end
+
+badge: "PR"
+
+card:
+  title: "Coinepay バーチャルカード · 1 枚で世界中の支払いに"
+  body: "ChatGPT や Claude などの AI サービスの契約、Facebook・Google・TikTok への広告出稿、YouTube や Netflix の加入、そして海外送金まで、カード 1 枚で完結します。多通貨決済に対応し、リアルタイムでチャージでき、発行後すぐに使えます。"
+  cta:
+    label: "カードを作る →"
+    url: "https://www.coinepay.net/login?referrer=7YDCLP"
+
+contact:
+  title: "お問い合わせ"
+  body: "カード発行、チャージ、送金についてのご質問には担当者が対応します。"
+  links:
+    - icon: "✈"
+      label: "Telegram グループ"
+      url: "https://t.me/coinepay3"
+    - icon: "💬"
+      label: "オンラインサポート"
+      url: "https://chat.ssrchat.com/service/grpect"
+    - icon: "💳"
+      label: "カード発行プラットフォームへ"
+      url: "https://www.coinepay.net/login?referrer=7YDCLP"
+      primary: true
+
+energy:
+  icon: "⚡"
+  title: "TRC20 の送金手数料が高い？エナジーをレンタル"
+  points:
+    - "エナジーが不足していると、USDT-TRC20 の送金 1 回につき <b>13〜27 TRX</b> を消費します。費用は送金額ではなく送金回数で決まります。"
+    - "エナジーのレンタルは 65,000 エナジーで <b>1.5〜1.7 TRX</b> から（すでに USDT を保有しているアドレス宛の送金 1 回分に相当）。受取アドレスが空の場合は 130,000 エナジー、約 <b>3.0〜3.4 TRX</b> が必要です。"
+    - "登録不要：TRX をプラットフォームの受取アドレスへ送ると、エナジーが自動的に送金元アドレスへ委任されます。"
+    - "一括送金、取引所、加盟店は API でレンタルを自動化できます。"
+  cta:
+    label: "エナジーを借りる"
+    url: "https://login.trxapi.io/energy"

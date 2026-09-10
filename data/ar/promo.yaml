@@ -1,0 +1,45 @@
+# العربية —— 文章页推广位文案。改这个文件即可，不用动 HTML/CSS。
+# enable: false 可一键关掉本语言的全部推广位。
+# 投放位置：after-intro 开头 / middle 中部 / end 文末 / off 关闭
+enable: true
+
+placement:
+  card: after-intro
+  energy: middle
+  contact: end
+
+badge: "إعلان"
+
+card:
+  title: "بطاقات Coinepay الافتراضية · بطاقة واحدة للدفع في كل مكان"
+  body: "اشترك في ChatGPT وClaude وغيرها من خدمات الذكاء الاصطناعي، وأطلق حملات إعلانية على Facebook وGoogle وTikTok، وفعِّل YouTube وNetflix، وأرسل حوالات دولية — كل ذلك ببطاقة واحدة. تسوية متعددة العملات، وشحن فوري، وجاهزية للاستخدام فور الإصدار."
+  cta:
+    label: "احصل على بطاقة ←"
+    url: "https://www.coinepay.net/login?referrer=7YDCLP"
+
+contact:
+  title: "تواصل معنا"
+  body: "لديك سؤال عن إصدار البطاقة أو الشحن أو الحوالات؟ سيرد عليك موظف حقيقي."
+  links:
+    - icon: "✈"
+      label: "مجموعة تيليجرام"
+      url: "https://t.me/coinepay3"
+    - icon: "💬"
+      label: "الدعم المباشر"
+      url: "https://chat.ssrchat.com/service/grpect"
+    - icon: "💳"
+      label: "الانتقال إلى المنصة"
+      url: "https://www.coinepay.net/login?referrer=7YDCLP"
+      primary: true
+
+energy:
+  icon: "⚡"
+  title: "هل رسوم تحويل TRC20 مرتفعة؟ استأجر الطاقة"
+  points:
+    - "كل تحويل USDT-TRC20 يستهلك <b>13 إلى 27 TRX</b> عند نقص الطاقة، والتكلفة تعتمد على عدد التحويلات لا على المبلغ المُرسَل."
+    - "يبدأ تأجير الطاقة من <b>1.5 إلى 1.7 TRX</b> مقابل 65,000 وحدة طاقة (تكفي لتحويل واحد إلى عنوان يحتوي على USDT بالفعل). أما إذا كان عنوان المستلم فارغًا فستحتاج إلى 130,000 وحدة، أي نحو <b>3.0 إلى 3.4 TRX</b>."
+    - "اطلب دون تسجيل: أرسل TRX إلى عنوان المنصة، وتُفوَّض الطاقة تلقائيًا إلى عنوان الإرسال الخاص بك."
+    - "يمكن للتحويلات المجمَّعة ومنصات التداول والتجار أتمتة التأجير عبر الواجهة البرمجية."
+  cta:
+    label: "استأجر الطاقة"
+    url: "https://login.trxapi.io/energy"

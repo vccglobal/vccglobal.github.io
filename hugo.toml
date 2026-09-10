@@ -2,8 +2,15 @@ baseURL = 'https://vccglobal.github.io/'
 theme = 'PaperMod'
 
 # ── 多语言 ────────────────────────────────────
+# 本文件的语言块由 /tmp/gen_config.py 按统一模板生成，改动请保持格式一致。
 # defaultContentLanguageInSubdir = false ⇒ 中文在站点根目录（/posts/...），
-# 英文在 /en/ 下（/en/posts/...）。原有中文链接保持不变，不会 404。
+# 其余语言各自在 /<语言代码>/ 下。原有中文链接保持不变，不会 404。
+#
+# params.noindex = true 的语言：内容尚未铺开，暂不进 sitemap，页面也带
+# <meta name="robots" content="noindex,follow">。等该语言有了文章，
+# 删掉它的 noindex 一行即可放出。
+# params.langGroup：切换器下拉面板的分组（ea 东亚 / sa 南亚 / sea 东南亚 /
+# me 中东 / eu 欧洲与美洲）。
 defaultContentLanguage = 'zh'
 defaultContentLanguageInSubdir = false
 
@@ -23,8 +30,7 @@ buildExpired = false
 [outputs]
   home = ['HTML', 'RSS', 'JSON']   # JSON 供站内搜索使用（每种语言各生成一份）
 
-# 分类/标签的「词条」来自每篇文章的 front matter，因此中英文分类天然独立：
-# /categories/ 只列中文分类，/en/categories/ 只列英文分类。
+# 分类/标签的「词条」来自每篇文章的 front matter，因此各语言的分类天然独立。
 [taxonomies]
   category = 'categories'
   tag = 'tags'
@@ -74,20 +80,21 @@ buildExpired = false
     minMatchCharLength = 0
     keys = ['title', 'permalink', 'summary', 'content']
 
-# ══ 中文 ══════════════════════════════════════
+# ══ 简体中文 (zh) · 东亚 ══════════════════════════════
 [languages.zh]
-  locale = 'zh-CN'
-  label = '中文'
+  locale = "zh-CN"
+  label = "简体中文"
   contentDir = 'content/zh'
   weight = 1
   title = 'vccglobal'
 
   [languages.zh.params]
-    description = 'Coinepay —— 虚拟信用卡、TRX 能量租赁、全球跨境汇款与 API 对接'
-    keywords = ['虚拟信用卡', 'TRX能量租赁', '跨境汇款', 'Coinepay', 'USDT']
+    description = "Coinepay —— 虚拟信用卡、TRX 能量租赁、全球跨境汇款与 API 对接"
+    keywords = ["虚拟信用卡", "TRX能量租赁", "跨境汇款", "Coinepay", "USDT"]
+    langGroup = "ea"
 
     [languages.zh.params.homeInfoParams]
-      Title = 'Coinepay · 一站式跨境支付'
+      Title = "Coinepay · 一站式跨境支付"
       Content = '''
 虚拟信用卡 · TRX 能量租赁 · 全球跨境汇款 · API 对接
 
@@ -99,47 +106,47 @@ buildExpired = false
 **联系我们** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
 '''
 
-  # 菜单 URL 写站内相对路径即可，PaperMod 用 absLangURL 自动加语言前缀
   [[languages.zh.menu.main]]
     identifier = 'posts'
-    name = '文章'
+    name = "文章"
     url = '/posts/'
     weight = 10
   [[languages.zh.menu.main]]
     identifier = 'archives'
-    name = '归档'
+    name = "归档"
     url = '/archives/'
     weight = 20
   [[languages.zh.menu.main]]
     identifier = 'categories'
-    name = '分类'
+    name = "分类"
     url = '/categories/'
     weight = 30
   [[languages.zh.menu.main]]
     identifier = 'tags'
-    name = '标签'
+    name = "标签"
     url = '/tags/'
     weight = 40
   [[languages.zh.menu.main]]
     identifier = 'search'
-    name = '搜索'
+    name = "搜索"
     url = '/search/'
     weight = 50
 
-# ══ English ═══════════════════════════════════
+# ══ English (en) · 欧洲与美洲 ════════════════════════
 [languages.en]
-  locale = 'en'
-  label = 'English'
+  locale = "en"
+  label = "English"
   contentDir = 'content/en'
   weight = 2
   title = 'vccglobal'
 
   [languages.en.params]
-    description = 'Coinepay — virtual credit cards, TRX energy rental, global remittance and payment APIs'
-    keywords = ['virtual credit card', 'TRX energy rental', 'global remittance', 'Coinepay', 'USDT']
+    description = "Coinepay — virtual credit cards, TRX energy rental, global remittance and payment APIs"
+    keywords = ["virtual credit card", "TRX energy rental", "global remittance", "Coinepay", "USDT"]
+    langGroup = "eu"
 
     [languages.en.params.homeInfoParams]
-      Title = 'Coinepay · Cross-Border Payments, One Platform'
+      Title = "Coinepay · Cross-Border Payments, One Platform"
       Content = '''
 Virtual Credit Cards · TRX Energy Rental · Global Remittance · Payment APIs
 
@@ -153,27 +160,771 @@ Virtual Credit Cards · TRX Energy Rental · Global Remittance · Payment APIs
 
   [[languages.en.menu.main]]
     identifier = 'posts'
-    name = 'Posts'
+    name = "Posts"
     url = '/posts/'
     weight = 10
   [[languages.en.menu.main]]
     identifier = 'archives'
-    name = 'Archives'
+    name = "Archives"
     url = '/archives/'
     weight = 20
   [[languages.en.menu.main]]
     identifier = 'categories'
-    name = 'Categories'
+    name = "Categories"
     url = '/categories/'
     weight = 30
   [[languages.en.menu.main]]
     identifier = 'tags'
-    name = 'Tags'
+    name = "Tags"
     url = '/tags/'
     weight = 40
   [[languages.en.menu.main]]
     identifier = 'search'
-    name = 'Search'
+    name = "Search"
+    url = '/search/'
+    weight = 50
+
+# ══ Español (es) · 欧洲与美洲 ════════════════════════
+[languages.es]
+  locale = "es"
+  label = "Español"
+  contentDir = 'content/es'
+  weight = 3
+  title = 'vccglobal'
+
+  [languages.es.params]
+    description = "Coinepay — tarjetas de crédito virtuales, alquiler de energía TRX, remesas globales y API de pagos"
+    keywords = ["tarjeta de crédito virtual", "alquiler de energía TRX", "remesas globales", "Coinepay", "USDT"]
+    langGroup = "eu"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.es.params.homeInfoParams]
+      Title = "Coinepay · Pagos transfronterizos en una sola plataforma"
+      Content = '''
+Tarjetas virtuales · Alquiler de energía TRX · Remesas globales · API de pagos
+
+- **Tarjetas de crédito virtuales** —— Paga ChatGPT, Claude y otros servicios de IA, gestiona cuentas publicitarias de Facebook, Google y TikTok, suscríbete a YouTube y Netflix. Liquidación multidivisa, recargas en tiempo real y uso inmediato tras la emisión.
+- **Alquiler de energía TRX** —— ¿Las comisiones de USDT-TRC20 son demasiado altas? Alquila energía desde 1,5 TRX, haz tu pedido sin registrarte o conecta la API para transferencias por lotes.
+- **Remesas globales** —— Matrículas, facturas de proveedores y honorarios, pagados en varias divisas con todos los registros en un mismo lugar.
+- **API de pagos** —— Emisión masiva de tarjetas y alquiler automatizado de energía para comercios y exchanges.
+
+**Contáctanos** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.es.menu.main]]
+    identifier = 'posts'
+    name = "Artículos"
+    url = '/posts/'
+    weight = 10
+  [[languages.es.menu.main]]
+    identifier = 'archives'
+    name = "Archivo"
+    url = '/archives/'
+    weight = 20
+  [[languages.es.menu.main]]
+    identifier = 'categories'
+    name = "Categorías"
+    url = '/categories/'
+    weight = 30
+  [[languages.es.menu.main]]
+    identifier = 'tags'
+    name = "Etiquetas"
+    url = '/tags/'
+    weight = 40
+  [[languages.es.menu.main]]
+    identifier = 'search'
+    name = "Buscar"
+    url = '/search/'
+    weight = 50
+
+# ══ Français (fr) · 欧洲与美洲 ═══════════════════════
+[languages.fr]
+  locale = "fr"
+  label = "Français"
+  contentDir = 'content/fr'
+  weight = 4
+  title = 'vccglobal'
+
+  [languages.fr.params]
+    description = "Coinepay — cartes de crédit virtuelles, location d’énergie TRX, transferts internationaux et API de paiement"
+    keywords = ["carte de crédit virtuelle", "location d’énergie TRX", "transfert international", "Coinepay", "USDT"]
+    langGroup = "eu"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.fr.params.homeInfoParams]
+      Title = "Coinepay · Les paiements transfrontaliers sur une seule plateforme"
+      Content = '''
+Cartes virtuelles · Location d’énergie TRX · Transferts internationaux · API de paiement
+
+- **Cartes de crédit virtuelles** —— Payez ChatGPT, Claude et d’autres services d’IA, gérez vos comptes publicitaires Facebook, Google et TikTok, abonnez-vous à YouTube et Netflix. Règlement multidevise, recharges en temps réel, utilisables dès l’émission.
+- **Location d’énergie TRX** —— Les frais de transfert USDT-TRC20 vous coûtent trop cher ? Louez de l’énergie à partir de 1,5 TRX, commandez sans inscription ou connectez l’API pour les transferts groupés.
+- **Transferts internationaux** —— Frais de scolarité, factures fournisseurs et honoraires, réglés en plusieurs devises avec tous les justificatifs au même endroit.
+- **API de paiement** —— Émission de cartes en masse et location automatisée d’énergie pour les marchands et les plateformes d’échange.
+
+**Nous contacter** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.fr.menu.main]]
+    identifier = 'posts'
+    name = "Articles"
+    url = '/posts/'
+    weight = 10
+  [[languages.fr.menu.main]]
+    identifier = 'archives'
+    name = "Archives"
+    url = '/archives/'
+    weight = 20
+  [[languages.fr.menu.main]]
+    identifier = 'categories'
+    name = "Catégories"
+    url = '/categories/'
+    weight = 30
+  [[languages.fr.menu.main]]
+    identifier = 'tags'
+    name = "Étiquettes"
+    url = '/tags/'
+    weight = 40
+  [[languages.fr.menu.main]]
+    identifier = 'search'
+    name = "Recherche"
+    url = '/search/'
+    weight = 50
+
+# ══ Português (pt) · 欧洲与美洲 ══════════════════════
+[languages.pt]
+  locale = "pt"
+  label = "Português"
+  contentDir = 'content/pt'
+  weight = 5
+  title = 'vccglobal'
+
+  [languages.pt.params]
+    description = "Coinepay — cartões de crédito virtuais, aluguel de energia TRX, remessas globais e APIs de pagamento"
+    keywords = ["cartão de crédito virtual", "aluguel de energia TRX", "remessa global", "Coinepay", "USDT"]
+    langGroup = "eu"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.pt.params.homeInfoParams]
+      Title = "Coinepay · Pagamentos internacionais em uma só plataforma"
+      Content = '''
+Cartões virtuais · Aluguel de energia TRX · Remessas globais · APIs de pagamento
+
+- **Cartões de crédito virtuais** —— Pague ChatGPT, Claude e outros serviços de IA, administre contas de anúncios no Facebook, Google e TikTok, assine YouTube e Netflix. Liquidação multimoeda, recargas em tempo real e uso imediato após a emissão.
+- **Aluguel de energia TRX** —— As taxas de transferência USDT-TRC20 estão altas demais? Alugue energia a partir de 1,5 TRX, faça o pedido sem cadastro ou conecte a API para transferências em lote.
+- **Remessas globais** —— Mensalidades, faturas de fornecedores e honorários, pagos em várias moedas com todos os registros reunidos em um só lugar.
+- **APIs de pagamento** —— Emissão de cartões em massa e aluguel automatizado de energia para comerciantes e exchanges.
+
+**Fale conosco** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.pt.menu.main]]
+    identifier = 'posts'
+    name = "Artigos"
+    url = '/posts/'
+    weight = 10
+  [[languages.pt.menu.main]]
+    identifier = 'archives'
+    name = "Arquivo"
+    url = '/archives/'
+    weight = 20
+  [[languages.pt.menu.main]]
+    identifier = 'categories'
+    name = "Categorias"
+    url = '/categories/'
+    weight = 30
+  [[languages.pt.menu.main]]
+    identifier = 'tags'
+    name = "Tags"
+    url = '/tags/'
+    weight = 40
+  [[languages.pt.menu.main]]
+    identifier = 'search'
+    name = "Buscar"
+    url = '/search/'
+    weight = 50
+
+# ══ Polski (pl) · 欧洲与美洲 ═════════════════════════
+[languages.pl]
+  locale = "pl"
+  label = "Polski"
+  contentDir = 'content/pl'
+  weight = 6
+  title = 'vccglobal'
+
+  [languages.pl.params]
+    description = "Coinepay — wirtualne karty kredytowe, wynajem energii TRX, przelewy międzynarodowe i API płatnicze"
+    keywords = ["wirtualna karta kredytowa", "wynajem energii TRX", "przelewy międzynarodowe", "Coinepay", "USDT"]
+    langGroup = "eu"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.pl.params.homeInfoParams]
+      Title = "Coinepay · Płatności transgraniczne na jednej platformie"
+      Content = '''
+Karty wirtualne · Wynajem energii TRX · Przelewy międzynarodowe · API płatnicze
+
+- **Wirtualne karty kredytowe** —— Opłać ChatGPT, Claude i inne usługi AI, prowadź konta reklamowe Facebooka, Google i TikToka, wykup abonament YouTube i Netflix. Rozliczenia wielowalutowe, doładowania w czasie rzeczywistym, karta działa od razu po wydaniu.
+- **Wynajem energii TRX** —— Opłaty za przelewy USDT-TRC20 są zbyt wysokie? Wynajmij energię już od 1,5 TRX, złóż zamówienie bez rejestracji albo podłącz API do przelewów zbiorczych.
+- **Przelewy międzynarodowe** —— Czesne, faktury od dostawców i honoraria opłacane w wielu walutach, a wszystkie potwierdzenia w jednym miejscu.
+- **API płatnicze** —— Masowe wydawanie kart i automatyczny wynajem energii dla sprzedawców i giełd.
+
+**Skontaktuj się z nami** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.pl.menu.main]]
+    identifier = 'posts'
+    name = "Artykuły"
+    url = '/posts/'
+    weight = 10
+  [[languages.pl.menu.main]]
+    identifier = 'archives'
+    name = "Archiwum"
+    url = '/archives/'
+    weight = 20
+  [[languages.pl.menu.main]]
+    identifier = 'categories'
+    name = "Kategorie"
+    url = '/categories/'
+    weight = 30
+  [[languages.pl.menu.main]]
+    identifier = 'tags'
+    name = "Tagi"
+    url = '/tags/'
+    weight = 40
+  [[languages.pl.menu.main]]
+    identifier = 'search'
+    name = "Szukaj"
+    url = '/search/'
+    weight = 50
+
+# ══ Română (ro) · 欧洲与美洲 ═════════════════════════
+[languages.ro]
+  locale = "ro"
+  label = "Română"
+  contentDir = 'content/ro'
+  weight = 7
+  title = 'vccglobal'
+
+  [languages.ro.params]
+    description = "Coinepay — carduri de credit virtuale, închiriere de energie TRX, transferuri internaționale și API de plată"
+    keywords = ["card de credit virtual", "închiriere energie TRX", "transfer internațional", "Coinepay", "USDT"]
+    langGroup = "eu"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.ro.params.homeInfoParams]
+      Title = "Coinepay · Plăți transfrontaliere pe o singură platformă"
+      Content = '''
+Carduri virtuale · Închiriere de energie TRX · Transferuri internaționale · API de plată
+
+- **Carduri de credit virtuale** —— Plătește ChatGPT, Claude și alte servicii AI, administrează conturi de publicitate pe Facebook, Google și TikTok, abonează-te la YouTube și Netflix. Decontare multivalutară, alimentare în timp real, cardul poate fi folosit imediat după emitere.
+- **Închiriere de energie TRX** —— Comisioanele pentru transferurile USDT-TRC20 sunt prea mari? Închiriază energie de la 1,5 TRX, comandă fără înregistrare sau conectează API-ul pentru transferuri în masă.
+- **Transferuri internaționale** —— Taxe de școlarizare, facturi de la furnizori și onorarii, plătite în mai multe valute, cu toate documentele într-un singur loc.
+- **API de plată** —— Emitere de carduri în masă și închiriere automată de energie pentru comercianți și burse de criptomonede.
+
+**Contactează-ne** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.ro.menu.main]]
+    identifier = 'posts'
+    name = "Articole"
+    url = '/posts/'
+    weight = 10
+  [[languages.ro.menu.main]]
+    identifier = 'archives'
+    name = "Arhivă"
+    url = '/archives/'
+    weight = 20
+  [[languages.ro.menu.main]]
+    identifier = 'categories'
+    name = "Categorii"
+    url = '/categories/'
+    weight = 30
+  [[languages.ro.menu.main]]
+    identifier = 'tags'
+    name = "Etichete"
+    url = '/tags/'
+    weight = 40
+  [[languages.ro.menu.main]]
+    identifier = 'search'
+    name = "Căutare"
+    url = '/search/'
+    weight = 50
+
+# ══ Türkçe (tr) · 中东 ════════════════════════════
+[languages.tr]
+  locale = "tr"
+  label = "Türkçe"
+  contentDir = 'content/tr'
+  weight = 8
+  title = 'vccglobal'
+
+  [languages.tr.params]
+    description = "Coinepay — sanal kredi kartları, TRX enerji kiralama, küresel havale ve ödeme API’leri"
+    keywords = ["sanal kredi kartı", "TRX enerji kiralama", "küresel havale", "Coinepay", "USDT"]
+    langGroup = "me"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.tr.params.homeInfoParams]
+      Title = "Coinepay · Sınır ötesi ödemeler tek platformda"
+      Content = '''
+Sanal kartlar · TRX enerji kiralama · Küresel havale · Ödeme API’leri
+
+- **Sanal kredi kartları** —— ChatGPT, Claude ve diğer yapay zekâ hizmetlerinin ödemesini yapın, Facebook, Google ve TikTok reklam hesaplarınızı yönetin, YouTube ve Netflix aboneliği alın. Çoklu para birimiyle mutabakat, anlık yükleme, kart verildiği anda kullanıma hazır.
+- **TRX enerji kiralama** —— USDT-TRC20 transfer ücretleri çok mu yüksek? 1,5 TRX’ten başlayan fiyatlarla enerji kiralayın, kayıt olmadan sipariş verin veya toplu transferler için API’yi bağlayın.
+- **Küresel havale** —— Okul ücretleri, tedarikçi faturaları ve hizmet bedelleri; birden fazla para biriminde ödenir, tüm kayıtlar tek yerde toplanır.
+- **Ödeme API’leri** —— İşletmeler ve borsalar için toplu kart basımı ve otomatik enerji kiralama.
+
+**Bize ulaşın** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.tr.menu.main]]
+    identifier = 'posts'
+    name = "Yazılar"
+    url = '/posts/'
+    weight = 10
+  [[languages.tr.menu.main]]
+    identifier = 'archives'
+    name = "Arşiv"
+    url = '/archives/'
+    weight = 20
+  [[languages.tr.menu.main]]
+    identifier = 'categories'
+    name = "Kategoriler"
+    url = '/categories/'
+    weight = 30
+  [[languages.tr.menu.main]]
+    identifier = 'tags'
+    name = "Etiketler"
+    url = '/tags/'
+    weight = 40
+  [[languages.tr.menu.main]]
+    identifier = 'search'
+    name = "Ara"
+    url = '/search/'
+    weight = 50
+
+# ══ 日本語 (ja) · 东亚 ═══════════════════════════════
+[languages.ja]
+  locale = "ja"
+  label = "日本語"
+  contentDir = 'content/ja'
+  weight = 9
+  title = 'vccglobal'
+
+  [languages.ja.params]
+    description = "Coinepay — バーチャルクレジットカード、TRXエナジーレンタル、国際送金、決済API"
+    keywords = ["バーチャルクレジットカード", "TRXエナジーレンタル", "国際送金", "Coinepay", "USDT"]
+    langGroup = "ea"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.ja.params.homeInfoParams]
+      Title = "Coinepay · クロスボーダー決済をひとつのプラットフォームで"
+      Content = '''
+バーチャルカード · TRXエナジーレンタル · 国際送金 · 決済API
+
+- **バーチャルクレジットカード** —— ChatGPT や Claude などの AI サービスの支払い、Facebook・Google・TikTok の広告アカウント運用、YouTube や Netflix の契約に。多通貨決済に対応し、リアルタイムでチャージでき、発行後すぐに利用できます。
+- **TRXエナジーレンタル** —— USDT-TRC20 の送金手数料が高すぎませんか。エナジーは 1.5 TRX からレンタルでき、登録なしでも注文可能。一括送金には API を接続できます。
+- **国際送金** —— 学費、仕入代金、サービス料金を複数通貨で送金し、支払い記録を一か所にまとめて管理できます。
+- **決済API** —— 加盟店や取引所向けに、カードの一括発行とエナジーの自動レンタルに対応します。
+
+**お問い合わせ** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.ja.menu.main]]
+    identifier = 'posts'
+    name = "記事"
+    url = '/posts/'
+    weight = 10
+  [[languages.ja.menu.main]]
+    identifier = 'archives'
+    name = "アーカイブ"
+    url = '/archives/'
+    weight = 20
+  [[languages.ja.menu.main]]
+    identifier = 'categories'
+    name = "カテゴリー"
+    url = '/categories/'
+    weight = 30
+  [[languages.ja.menu.main]]
+    identifier = 'tags'
+    name = "タグ"
+    url = '/tags/'
+    weight = 40
+  [[languages.ja.menu.main]]
+    identifier = 'search'
+    name = "検索"
+    url = '/search/'
+    weight = 50
+
+# ══ 한국어 (ko) · 东亚 ═══════════════════════════════
+[languages.ko]
+  locale = "ko"
+  label = "한국어"
+  contentDir = 'content/ko'
+  weight = 10
+  title = 'vccglobal'
+
+  [languages.ko.params]
+    description = "Coinepay — 가상 신용카드, TRX 에너지 렌탈, 해외 송금 및 결제 API"
+    keywords = ["가상 신용카드", "TRX 에너지 렌탈", "해외 송금", "Coinepay", "USDT"]
+    langGroup = "ea"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.ko.params.homeInfoParams]
+      Title = "Coinepay · 국경 간 결제를 하나의 플랫폼에서"
+      Content = '''
+가상 카드 · TRX 에너지 렌탈 · 해외 송금 · 결제 API
+
+- **가상 신용카드** —— ChatGPT, Claude 등 AI 서비스 결제, Facebook·Google·TikTok 광고 계정 운영, YouTube와 Netflix 구독에 사용하세요. 다중 통화 정산과 실시간 충전을 지원하며 발급 즉시 사용할 수 있습니다.
+- **TRX 에너지 렌탈** —— USDT-TRC20 전송 수수료가 부담스러우신가요? 에너지는 1.5 TRX부터 대여할 수 있고, 가입 없이 주문할 수 있으며, 대량 전송은 API로 연동됩니다.
+- **해외 송금** —— 학비, 공급업체 대금, 서비스 비용을 여러 통화로 보내고 모든 결제 기록을 한곳에서 관리하세요.
+- **결제 API** —— 가맹점과 거래소를 위한 대량 카드 발급 및 에너지 자동 렌탈을 지원합니다.
+
+**문의하기** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.ko.menu.main]]
+    identifier = 'posts'
+    name = "게시글"
+    url = '/posts/'
+    weight = 10
+  [[languages.ko.menu.main]]
+    identifier = 'archives'
+    name = "아카이브"
+    url = '/archives/'
+    weight = 20
+  [[languages.ko.menu.main]]
+    identifier = 'categories'
+    name = "카테고리"
+    url = '/categories/'
+    weight = 30
+  [[languages.ko.menu.main]]
+    identifier = 'tags'
+    name = "태그"
+    url = '/tags/'
+    weight = 40
+  [[languages.ko.menu.main]]
+    identifier = 'search'
+    name = "검색"
+    url = '/search/'
+    weight = 50
+
+# ══ हिन्दी (hi) · 南亚 ════════════════════════════
+[languages.hi]
+  locale = "hi"
+  label = "हिन्दी"
+  contentDir = 'content/hi'
+  weight = 11
+  title = 'vccglobal'
+
+  [languages.hi.params]
+    description = "Coinepay — वर्चुअल क्रेडिट कार्ड, TRX एनर्जी रेंटल, वैश्विक धन प्रेषण और भुगतान API"
+    keywords = ["वर्चुअल क्रेडिट कार्ड", "TRX एनर्जी रेंटल", "वैश्विक धन प्रेषण", "Coinepay", "USDT"]
+    langGroup = "sa"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.hi.params.homeInfoParams]
+      Title = "Coinepay · सीमा-पार भुगतान, एक ही मंच पर"
+      Content = '''
+वर्चुअल कार्ड · TRX एनर्जी रेंटल · वैश्विक धन प्रेषण · भुगतान API
+
+- **वर्चुअल क्रेडिट कार्ड** —— ChatGPT, Claude और अन्य AI सेवाओं का भुगतान करें, Facebook, Google और TikTok विज्ञापन खाते चलाएँ, YouTube और Netflix की सदस्यता लें। बहु-मुद्रा निपटान, तत्काल टॉप-अप, और जारी होते ही उपयोग के लिए तैयार।
+- **TRX एनर्जी रेंटल** —— क्या USDT-TRC20 ट्रांसफर शुल्क बहुत अधिक है? 1.5 TRX से एनर्जी किराए पर लें, बिना पंजीकरण के ऑर्डर करें, या बैच ट्रांसफर के लिए API जोड़ें।
+- **वैश्विक धन प्रेषण** —— ट्यूशन फीस, आपूर्तिकर्ता चालान और सेवा शुल्क कई मुद्राओं में भेजें और सभी रिकॉर्ड एक ही जगह रखें।
+- **भुगतान API** —— व्यापारियों और एक्सचेंजों के लिए थोक कार्ड जारी करना और स्वचालित एनर्जी रेंटल।
+
+**संपर्क करें** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.hi.menu.main]]
+    identifier = 'posts'
+    name = "लेख"
+    url = '/posts/'
+    weight = 10
+  [[languages.hi.menu.main]]
+    identifier = 'archives'
+    name = "संग्रह"
+    url = '/archives/'
+    weight = 20
+  [[languages.hi.menu.main]]
+    identifier = 'categories'
+    name = "श्रेणियाँ"
+    url = '/categories/'
+    weight = 30
+  [[languages.hi.menu.main]]
+    identifier = 'tags'
+    name = "टैग"
+    url = '/tags/'
+    weight = 40
+  [[languages.hi.menu.main]]
+    identifier = 'search'
+    name = "खोज"
+    url = '/search/'
+    weight = 50
+
+# ══ বাংলা (bn) · 南亚 ═════════════════════════════
+[languages.bn]
+  locale = "bn"
+  label = "বাংলা"
+  contentDir = 'content/bn'
+  weight = 12
+  title = 'vccglobal'
+
+  [languages.bn.params]
+    description = "Coinepay — ভার্চুয়াল ক্রেডিট কার্ড, TRX এনার্জি ভাড়া, বৈশ্বিক রেমিট্যান্স ও পেমেন্ট API"
+    keywords = ["ভার্চুয়াল ক্রেডিট কার্ড", "TRX এনার্জি ভাড়া", "বৈশ্বিক রেমিট্যান্স", "Coinepay", "USDT"]
+    langGroup = "sa"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.bn.params.homeInfoParams]
+      Title = "Coinepay · সীমান্ত পার লেনদেন, এক প্ল্যাটফর্মে"
+      Content = '''
+ভার্চুয়াল কার্ড · TRX এনার্জি ভাড়া · বৈশ্বিক রেমিট্যান্স · পেমেন্ট API
+
+- **ভার্চুয়াল ক্রেডিট কার্ড** —— ChatGPT, Claude ও অন্যান্য AI সেবার বিল পরিশোধ করুন, Facebook, Google ও TikTok বিজ্ঞাপন অ্যাকাউন্ট পরিচালনা করুন, YouTube ও Netflix-এ সাবস্ক্রাইব করুন। বহু-মুদ্রায় নিষ্পত্তি, তাৎক্ষণিক টপ-আপ, ইস্যু হওয়ার সঙ্গে সঙ্গেই ব্যবহারযোগ্য।
+- **TRX এনার্জি ভাড়া** —— USDT-TRC20 ট্রান্সফার ফি কি অনেক বেশি? ১.৫ TRX থেকে এনার্জি ভাড়া নিন, নিবন্ধন ছাড়াই অর্ডার করুন, অথবা ব্যাচ ট্রান্সফারের জন্য API যুক্ত করুন।
+- **বৈশ্বিক রেমিট্যান্স** —— টিউশন ফি, সরবরাহকারীর চালান ও সেবার খরচ একাধিক মুদ্রায় পাঠান এবং সব রেকর্ড এক জায়গায় রাখুন।
+- **পেমেন্ট API** —— ব্যবসায়ী ও এক্সচেঞ্জের জন্য বাল্ক কার্ড ইস্যু এবং স্বয়ংক্রিয় এনার্জি ভাড়া।
+
+**যোগাযোগ করুন** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.bn.menu.main]]
+    identifier = 'posts'
+    name = "নিবন্ধ"
+    url = '/posts/'
+    weight = 10
+  [[languages.bn.menu.main]]
+    identifier = 'archives'
+    name = "আর্কাইভ"
+    url = '/archives/'
+    weight = 20
+  [[languages.bn.menu.main]]
+    identifier = 'categories'
+    name = "বিভাগ"
+    url = '/categories/'
+    weight = 30
+  [[languages.bn.menu.main]]
+    identifier = 'tags'
+    name = "ট্যাগ"
+    url = '/tags/'
+    weight = 40
+  [[languages.bn.menu.main]]
+    identifier = 'search'
+    name = "অনুসন্ধান"
+    url = '/search/'
+    weight = 50
+
+# ══ اردو (ur) · 南亚 ══════════════════════════════
+[languages.ur]
+  locale = "ur"
+  label = "اردو"
+  direction = 'rtl'
+  contentDir = 'content/ur'
+  weight = 13
+  title = 'vccglobal'
+
+  [languages.ur.params]
+    description = "Coinepay — ورچوئل کریڈٹ کارڈز، TRX انرجی کرایہ، عالمی ترسیلاتِ زر اور ادائیگی API"
+    keywords = ["ورچوئل کریڈٹ کارڈ", "TRX انرجی کرایہ", "عالمی ترسیلاتِ زر", "Coinepay", "USDT"]
+    langGroup = "sa"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.ur.params.homeInfoParams]
+      Title = "Coinepay · سرحد پار ادائیگیاں، ایک ہی پلیٹ فارم پر"
+      Content = '''
+ورچوئل کارڈز · TRX انرجی کرایہ · عالمی ترسیلاتِ زر · ادائیگی API
+
+- **ورچوئل کریڈٹ کارڈز** —— ChatGPT، Claude اور دیگر AI خدمات کی ادائیگی کریں، Facebook، Google اور TikTok کے اشتہاری اکاؤنٹ چلائیں، YouTube اور Netflix کی رکنیت لیں۔ متعدد کرنسیوں میں تصفیہ، فوری ٹاپ اپ، اور جاری ہوتے ہی قابلِ استعمال۔
+- **TRX انرجی کرایہ** —— کیا USDT-TRC20 ٹرانسفر فیس بہت زیادہ ہے؟ 1.5 TRX سے انرجی کرائے پر لیں، رجسٹریشن کے بغیر آرڈر کریں، یا بیچ ٹرانسفر کے لیے API منسلک کریں۔
+- **عالمی ترسیلاتِ زر** —— تعلیمی فیس، سپلائر کے بل اور خدمات کے اخراجات متعدد کرنسیوں میں بھیجیں اور تمام ریکارڈ ایک جگہ رکھیں۔
+- **ادائیگی API** —— تاجروں اور ایکسچینجز کے لیے بڑی تعداد میں کارڈ جاری کرنا اور خودکار انرجی کرایہ۔
+
+**ہم سے رابطہ کریں** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.ur.menu.main]]
+    identifier = 'posts'
+    name = "مضامین"
+    url = '/posts/'
+    weight = 10
+  [[languages.ur.menu.main]]
+    identifier = 'archives'
+    name = "آرکائیو"
+    url = '/archives/'
+    weight = 20
+  [[languages.ur.menu.main]]
+    identifier = 'categories'
+    name = "زمرہ جات"
+    url = '/categories/'
+    weight = 30
+  [[languages.ur.menu.main]]
+    identifier = 'tags'
+    name = "ٹیگز"
+    url = '/tags/'
+    weight = 40
+  [[languages.ur.menu.main]]
+    identifier = 'search'
+    name = "تلاش"
+    url = '/search/'
+    weight = 50
+
+# ══ العربية (ar) · 中东 ═══════════════════════════
+[languages.ar]
+  locale = "ar"
+  label = "العربية"
+  direction = 'rtl'
+  contentDir = 'content/ar'
+  weight = 14
+  title = 'vccglobal'
+
+  [languages.ar.params]
+    description = "Coinepay — بطاقات ائتمان افتراضية، تأجير طاقة TRX، تحويلات مالية عالمية وواجهات دفع برمجية"
+    keywords = ["بطاقة ائتمان افتراضية", "تأجير طاقة TRX", "تحويلات مالية عالمية", "Coinepay", "USDT"]
+    langGroup = "me"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.ar.params.homeInfoParams]
+      Title = "Coinepay · المدفوعات العابرة للحدود على منصة واحدة"
+      Content = '''
+بطاقات افتراضية · تأجير طاقة TRX · تحويلات عالمية · واجهات دفع برمجية
+
+- **بطاقات ائتمان افتراضية** —— ادفع اشتراكات ChatGPT وClaude وغيرها من خدمات الذكاء الاصطناعي، وأدر حسابات الإعلانات على Facebook وGoogle وTikTok، واشترك في YouTube وNetflix. تسوية متعددة العملات، وشحن فوري، وجاهزية للاستخدام فور الإصدار.
+- **تأجير طاقة TRX** —— هل رسوم تحويل USDT-TRC20 مرتفعة أكثر من اللازم؟ استأجر الطاقة ابتداءً من 1.5 TRX، واطلبها دون تسجيل، أو اربط الواجهة البرمجية للتحويلات المجمَّعة.
+- **تحويلات مالية عالمية** —— الرسوم الدراسية وفواتير المورِّدين وأتعاب الخدمات، تُدفع بعملات متعددة مع حفظ جميع السجلات في مكان واحد.
+- **واجهات دفع برمجية** —— إصدار البطاقات بالجملة وتأجير الطاقة آليًا للتجار ومنصات التداول.
+
+**تواصل معنا** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.ar.menu.main]]
+    identifier = 'posts'
+    name = "المقالات"
+    url = '/posts/'
+    weight = 10
+  [[languages.ar.menu.main]]
+    identifier = 'archives'
+    name = "الأرشيف"
+    url = '/archives/'
+    weight = 20
+  [[languages.ar.menu.main]]
+    identifier = 'categories'
+    name = "التصنيفات"
+    url = '/categories/'
+    weight = 30
+  [[languages.ar.menu.main]]
+    identifier = 'tags'
+    name = "الوسوم"
+    url = '/tags/'
+    weight = 40
+  [[languages.ar.menu.main]]
+    identifier = 'search'
+    name = "بحث"
+    url = '/search/'
+    weight = 50
+
+# ══ ไทย (th) · 东南亚 ══════════════════════════════
+[languages.th]
+  locale = "th"
+  label = "ไทย"
+  contentDir = 'content/th'
+  weight = 15
+  title = 'vccglobal'
+
+  [languages.th.params]
+    description = "Coinepay — บัตรเครดิตเสมือน เช่าพลังงาน TRX โอนเงินระหว่างประเทศ และ API ชำระเงิน"
+    keywords = ["บัตรเครดิตเสมือน", "เช่าพลังงาน TRX", "โอนเงินระหว่างประเทศ", "Coinepay", "USDT"]
+    langGroup = "sea"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.th.params.homeInfoParams]
+      Title = "Coinepay · การชำระเงินข้ามพรมแดนในแพลตฟอร์มเดียว"
+      Content = '''
+บัตรเสมือน · เช่าพลังงาน TRX · โอนเงินระหว่างประเทศ · API ชำระเงิน
+
+- **บัตรเครดิตเสมือน** —— ชำระค่า ChatGPT, Claude และบริการ AI อื่น ๆ ดูแลบัญชีโฆษณา Facebook, Google และ TikTok สมัคร YouTube และ Netflix รองรับการชำระหลายสกุลเงิน เติมเงินได้ทันที และใช้งานได้ทันทีที่ออกบัตร
+- **เช่าพลังงาน TRX** —— ค่าธรรมเนียมโอน USDT-TRC20 แพงเกินไปหรือไม่ เช่าพลังงานเริ่มต้นที่ 1.5 TRX สั่งซื้อได้โดยไม่ต้องสมัครสมาชิก หรือเชื่อมต่อ API สำหรับการโอนจำนวนมาก
+- **โอนเงินระหว่างประเทศ** —— ค่าเล่าเรียน ค่าสินค้าจากซัพพลายเออร์ และค่าบริการ โอนได้หลายสกุลเงินพร้อมเก็บบันทึกทั้งหมดไว้ในที่เดียว
+- **API ชำระเงิน** —— ออกบัตรจำนวนมากและเช่าพลังงานอัตโนมัติ สำหรับร้านค้าและกระดานเทรด
+
+**ติดต่อเรา** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.th.menu.main]]
+    identifier = 'posts'
+    name = "บทความ"
+    url = '/posts/'
+    weight = 10
+  [[languages.th.menu.main]]
+    identifier = 'archives'
+    name = "คลังบทความ"
+    url = '/archives/'
+    weight = 20
+  [[languages.th.menu.main]]
+    identifier = 'categories'
+    name = "หมวดหมู่"
+    url = '/categories/'
+    weight = 30
+  [[languages.th.menu.main]]
+    identifier = 'tags'
+    name = "แท็ก"
+    url = '/tags/'
+    weight = 40
+  [[languages.th.menu.main]]
+    identifier = 'search'
+    name = "ค้นหา"
+    url = '/search/'
+    weight = 50
+
+# ══ Tiếng Việt (vi) · 东南亚 ═══════════════════════
+[languages.vi]
+  locale = "vi"
+  label = "Tiếng Việt"
+  contentDir = 'content/vi'
+  weight = 16
+  title = 'vccglobal'
+
+  [languages.vi.params]
+    description = "Coinepay — thẻ tín dụng ảo, thuê năng lượng TRX, chuyển tiền quốc tế và API thanh toán"
+    keywords = ["thẻ tín dụng ảo", "thuê năng lượng TRX", "chuyển tiền quốc tế", "Coinepay", "USDT"]
+    langGroup = "sea"
+    noindex = true          # 暂不进 sitemap；有文章后删掉本行
+
+    [languages.vi.params.homeInfoParams]
+      Title = "Coinepay · Thanh toán xuyên biên giới trên một nền tảng"
+      Content = '''
+Thẻ ảo · Thuê năng lượng TRX · Chuyển tiền quốc tế · API thanh toán
+
+- **Thẻ tín dụng ảo** —— Thanh toán ChatGPT, Claude và các dịch vụ AI khác, vận hành tài khoản quảng cáo Facebook, Google và TikTok, đăng ký YouTube và Netflix. Thanh toán đa tiền tệ, nạp tiền tức thì, dùng được ngay khi phát hành.
+- **Thuê năng lượng TRX** —— Phí chuyển USDT-TRC20 quá cao? Thuê năng lượng chỉ từ 1,5 TRX, đặt lệnh không cần đăng ký, hoặc kết nối API cho các giao dịch hàng loạt.
+- **Chuyển tiền quốc tế** —— Học phí, hóa đơn nhà cung cấp và phí dịch vụ, thanh toán bằng nhiều loại tiền tệ với toàn bộ chứng từ ở cùng một nơi.
+- **API thanh toán** —— Phát hành thẻ hàng loạt và thuê năng lượng tự động cho thương nhân và sàn giao dịch.
+
+**Liên hệ với chúng tôi** —— Telegram [@coinepay_jas](https://t.me/coinepay_jas) · [WhatsApp](https://wa.me/message/2I3GXEELDVMHP1)
+'''
+
+  [[languages.vi.menu.main]]
+    identifier = 'posts'
+    name = "Bài viết"
+    url = '/posts/'
+    weight = 10
+  [[languages.vi.menu.main]]
+    identifier = 'archives'
+    name = "Lưu trữ"
+    url = '/archives/'
+    weight = 20
+  [[languages.vi.menu.main]]
+    identifier = 'categories'
+    name = "Chuyên mục"
+    url = '/categories/'
+    weight = 30
+  [[languages.vi.menu.main]]
+    identifier = 'tags'
+    name = "Thẻ"
+    url = '/tags/'
+    weight = 40
+  [[languages.vi.menu.main]]
+    identifier = 'search'
+    name = "Tìm kiếm"
     url = '/search/'
     weight = 50
 

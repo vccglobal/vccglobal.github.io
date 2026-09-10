@@ -1,0 +1,45 @@
+# हिन्दी —— 文章页推广位文案。改这个文件即可，不用动 HTML/CSS。
+# enable: false 可一键关掉本语言的全部推广位。
+# 投放位置：after-intro 开头 / middle 中部 / end 文末 / off 关闭
+enable: true
+
+placement:
+  card: after-intro
+  energy: middle
+  contact: end
+
+badge: "प्रायोजित"
+
+card:
+  title: "Coinepay वर्चुअल कार्ड · एक कार्ड, दुनिया भर में भुगतान"
+  body: "ChatGPT, Claude और अन्य AI सेवाओं की सदस्यता लें, Facebook, Google और TikTok पर विज्ञापन चलाएँ, YouTube और Netflix सक्रिय करें, और विदेश पैसे भेजें — सब कुछ एक ही कार्ड से। बहु-मुद्रा निपटान, तत्काल टॉप-अप, और जारी होते ही उपयोग के लिए तैयार।"
+  cta:
+    label: "कार्ड बनवाएँ →"
+    url: "https://www.coinepay.net/login?referrer=7YDCLP"
+
+contact:
+  title: "हमसे बात करें"
+  body: "कार्ड जारी करने, टॉप-अप या धन प्रेषण से जुड़ा कोई सवाल? एक असली व्यक्ति आपकी मदद करेगा।"
+  links:
+    - icon: "✈"
+      label: "टेलीग्राम ग्रुप"
+      url: "https://t.me/coinepay3"
+    - icon: "💬"
+      label: "लाइव सहायता"
+      url: "https://chat.ssrchat.com/service/grpect"
+    - icon: "💳"
+      label: "कार्ड प्लेटफ़ॉर्म पर जाएँ"
+      url: "https://www.coinepay.net/login?referrer=7YDCLP"
+      primary: true
+
+energy:
+  icon: "⚡"
+  title: "TRC20 ट्रांसफर शुल्क बहुत अधिक? एनर्जी किराए पर लें"
+  points:
+    - "एनर्जी कम होने पर हर USDT-TRC20 ट्रांसफर <b>13–27 TRX</b> खर्च कर देता है। लागत भेजी गई राशि पर नहीं, ट्रांसफर की संख्या पर निर्भर करती है।"
+    - "एनर्जी किराया 65,000 एनर्जी के लिए <b>1.5–1.7 TRX</b> से शुरू होता है (ऐसे पते पर एक ट्रांसफर के लिए पर्याप्त जिसमें पहले से USDT हो)। यदि प्राप्तकर्ता का पता खाली है, तो 130,000 एनर्जी यानी लगभग <b>3.0–3.4 TRX</b> चाहिए।"
+    - "पंजीकरण के बिना भी ऑर्डर करें: TRX को प्लेटफ़ॉर्म के पते पर भेजें, एनर्जी अपने आप आपके भेजने वाले पते पर सौंप दी जाएगी।"
+    - "बैच ट्रांसफर, एक्सचेंज और व्यापारी API के ज़रिए किराए को स्वचालित कर सकते हैं।"
+  cta:
+    label: "एनर्जी किराए पर लें"
+    url: "https://login.trxapi.io/energy"

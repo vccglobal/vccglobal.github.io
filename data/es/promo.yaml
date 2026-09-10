@@ -1,0 +1,45 @@
+# Español —— 文章页推广位文案。改这个文件即可，不用动 HTML/CSS。
+# enable: false 可一键关掉本语言的全部推广位。
+# 投放位置：after-intro 开头 / middle 中部 / end 文末 / off 关闭
+enable: true
+
+placement:
+  card: after-intro
+  energy: middle
+  contact: end
+
+badge: "Patrocinado"
+
+card:
+  title: "Tarjetas virtuales Coinepay · Una tarjeta para pagar en todo el mundo"
+  body: "Suscríbete a ChatGPT, Claude y otros servicios de IA, lanza campañas en Facebook, Google y TikTok, activa YouTube y Netflix, y envía remesas internacionales: todo con una sola tarjeta. Liquidación multidivisa, recargas en tiempo real y uso inmediato tras la emisión."
+  cta:
+    label: "Solicitar tarjeta →"
+    url: "https://www.coinepay.net/login?referrer=7YDCLP"
+
+contact:
+  title: "Hablemos"
+  body: "¿Dudas sobre emisión, recargas o remesas? Te atiende una persona real."
+  links:
+    - icon: "✈"
+      label: "Grupo de Telegram"
+      url: "https://t.me/coinepay3"
+    - icon: "💬"
+      label: "Soporte en vivo"
+      url: "https://chat.ssrchat.com/service/grpect"
+    - icon: "💳"
+      label: "Ir a la plataforma"
+      url: "https://www.coinepay.net/login?referrer=7YDCLP"
+      primary: true
+
+energy:
+  icon: "⚡"
+  title: "¿Las comisiones de TRC20 son demasiado altas? Alquila energía"
+  points:
+    - "Cada transferencia de USDT-TRC20 quema <b>13–27 TRX</b> si no tienes energía suficiente; el coste depende del número de transferencias, no del importe enviado."
+    - "El alquiler de energía cuesta desde <b>1,5–1,7 TRX</b> por 65.000 de energía (suficiente para una transferencia a una dirección que ya tenga USDT). Si la dirección receptora está vacía, necesitarás 130.000 de energía, unos <b>3,0–3,4 TRX</b>."
+    - "Sin registro: envía TRX a la dirección de la plataforma y la energía se delega automáticamente a tu dirección de envío."
+    - "Transferencias por lotes, exchanges y comercios pueden automatizar el alquiler mediante la API."
+  cta:
+    label: "Alquilar energía"
+    url: "https://login.trxapi.io/energy"

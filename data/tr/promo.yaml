@@ -1,0 +1,45 @@
+# Türkçe —— 文章页推广位文案。改这个文件即可，不用动 HTML/CSS。
+# enable: false 可一键关掉本语言的全部推广位。
+# 投放位置：after-intro 开头 / middle 中部 / end 文末 / off 关闭
+enable: true
+
+placement:
+  card: after-intro
+  energy: middle
+  contact: end
+
+badge: "Sponsorlu"
+
+card:
+  title: "Coinepay Sanal Kartlar · Tek kartla dünyanın her yerinde ödeme"
+  body: "ChatGPT, Claude ve diğer yapay zekâ hizmetlerine abone olun, Facebook, Google ve TikTok’ta reklam yayınlayın, YouTube ve Netflix üyeliği alın ve yurt dışına para gönderin — hepsi tek kartla. Çoklu para birimiyle mutabakat, anlık yükleme, verildiği anda kullanıma hazır."
+  cta:
+    label: "Kart alın →"
+    url: "https://www.coinepay.net/login?referrer=7YDCLP"
+
+contact:
+  title: "Bize yazın"
+  body: "Kart çıkarma, yükleme veya havale hakkında sorunuz mu var? Gerçek bir insan yanıtlıyor."
+  links:
+    - icon: "✈"
+      label: "Telegram grubu"
+      url: "https://t.me/coinepay3"
+    - icon: "💬"
+      label: "Canlı destek"
+      url: "https://chat.ssrchat.com/service/grpect"
+    - icon: "💳"
+      label: "Platforma git"
+      url: "https://www.coinepay.net/login?referrer=7YDCLP"
+      primary: true
+
+energy:
+  icon: "⚡"
+  title: "TRC20 transfer ücretleri çok mu yüksek? Enerji kiralayın"
+  points:
+    - "Enerjiniz yetersizse her USDT-TRC20 transferi <b>13–27 TRX</b> yakar; maliyet gönderilen tutara değil, transfer sayısına bağlıdır."
+    - "Enerji kiralama, 65.000 enerji için <b>1,5–1,7 TRX</b>’ten başlar (halihazırda USDT bulunan bir adrese tek transfer için yeterlidir). Alıcı adres boşsa 130.000 enerji, yani yaklaşık <b>3,0–3,4 TRX</b> gerekir."
+    - "Kayıt gerekmez: TRX’i platform adresine gönderin, enerji otomatik olarak gönderen adresinize devredilsin."
+    - "Toplu transferler, borsalar ve işletmeler kiralamayı API üzerinden otomatikleştirebilir."
+  cta:
+    label: "Enerji kirala"
+    url: "https://login.trxapi.io/energy"
