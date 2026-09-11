@@ -8,7 +8,6 @@ categories:
 tags:
   - 虚拟信用卡
 ---
-# 2026 X推特Premium订阅教程：Visa、Mastercard虚拟信用卡开卡与付款全流程
 
 很多人准备给 X，也就是以前的 Twitter，开通 Premium 时，第一件事通常不是研究银行卡，而是先看：
 

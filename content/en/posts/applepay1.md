@@ -9,7 +9,6 @@ tags:
   - Virtual Credit Card
   - apple pay
 ---
-# How to Add a Visa Virtual Card to Apple Wallet and Use Apple Pay
 
 Adding a virtual Visa card to Apple Wallet sounds straightforward: open Wallet, enter the card number, complete verification, and start paying with Apple Pay.
 

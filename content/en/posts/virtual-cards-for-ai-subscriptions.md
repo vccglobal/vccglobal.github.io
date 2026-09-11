@@ -9,7 +9,6 @@ tags:
   - Virtual Cards
   - AI Subscriptions
 ---
-# Paying for AI Subscriptions When Your Local Card Gets Declined
 
 Signing up for ChatGPT Plus, Claude Pro or a Midjourney plan is supposed to take two minutes. For a lot of people outside the US and EU, it takes considerably longer — the card is entered, the page spins, and the charge comes back declined.
 

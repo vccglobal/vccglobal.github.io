@@ -10,7 +10,6 @@ tags:
   - 虚拟信用卡
   - 广告投流
 ---
-# TikTok Ads Manager支持哪些付款方式？Visa/Mastercard虚拟卡充值使用指南
 
 做 TikTok 广告的人，真正开始放量之后通常都会发现：
 

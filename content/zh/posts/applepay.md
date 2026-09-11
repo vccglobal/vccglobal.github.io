@@ -8,7 +8,6 @@ categories:
 tags:
   - 虚拟信用卡
 ---
-# Apple Pay怎么绑定虚拟信用卡？Visa与万事达卡添加Wallet、验证和支付流程
 
 很多人第一次接触 Apple Pay 时，会把它理解成一个“把银行卡照片放进 iPhone 钱包”的功能。
 

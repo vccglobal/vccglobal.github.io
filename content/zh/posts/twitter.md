@@ -8,7 +8,6 @@ categories:
 tags:
   - 虚拟信用卡
 ---
-# X（原Twitter）推特蓝标会员怎么付款？万事达与Visa虚拟信用卡订阅Premium方法详解
 
 想给 X，也就是原来的 Twitter 开通蓝标，很多人一开始会以为事情很简单：
 

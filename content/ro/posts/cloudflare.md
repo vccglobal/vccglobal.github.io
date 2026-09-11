@@ -9,7 +9,6 @@ categories:
 tags:
   - Virtual Credit Card
 ---
-# Plata Cloudflare cu card virtual: soluții pentru abonamente internaționale
 
 Cloudflare este utilizat de milioane de proprietari de site-uri, dezvoltatori și companii pentru protecția și optimizarea serviciilor online.
 
@@ -32,7 +31,7 @@ Pentru unii utilizatori:
 
 ---
 
-# De ce poate fi respinsă plata Cloudflare?
+## De ce poate fi respinsă plata Cloudflare?
 
 Cloudflare este un serviciu pe bază de abonament.
 
@@ -44,25 +43,25 @@ Prin urmare, metoda de plată trebuie să suporte:
 
 ---
 
-## Restricții bancare
+### Restricții bancare
 
 Unele bănci blochează plățile externe pentru protecție împotriva fraudelor.
 
 ---
 
-## Lipsa suportului pentru abonamente
+### Lipsa suportului pentru abonamente
 
 Un card poate funcționa pentru cumpărături obișnuite, dar nu pentru plăți recurente.
 
 ---
 
-## Date de facturare incorecte
+### Date de facturare incorecte
 
 Diferențele dintre datele introduse și informațiile cardului pot provoca refuzul plății.
 
 ---
 
-# Ce este un card virtual Visa sau Mastercard?
+## Ce este un card virtual Visa sau Mastercard?
 
 Este un card digital creat pentru plăți online.
 
@@ -80,7 +79,7 @@ Avantaje:
 
 ---
 
-# De ce să iei în considerare CoinePay?
+## De ce să iei în considerare CoinePay?
 
 Dacă ai deja un card internațional funcțional, îl poți folosi direct.
 
@@ -101,9 +100,9 @@ Utilizatorii pot:
 
 ---
 
-# Pașii pentru plata Cloudflare
+## Pașii pentru plata Cloudflare
 
-## 1. Verifică planul
+### 1. Verifică planul
 
 Alege:
 
@@ -113,7 +112,7 @@ Alege:
 
 ---
 
-## 2. Pregătește contul CoinePay
+### 2. Pregătește contul CoinePay
 
 Verifică:
 
@@ -123,7 +122,7 @@ Verifică:
 
 ---
 
-## 3. Adaugă fonduri
+### 3. Adaugă fonduri
 
 Include:
 
@@ -133,7 +132,7 @@ Include:
 
 ---
 
-## 4. Introdu cardul în Cloudflare
+### 4. Introdu cardul în Cloudflare
 
 Accesează:
 
@@ -148,7 +147,7 @@ Completează:
 
 ---
 
-# Visa sau Mastercard?
+## Visa sau Mastercard?
 
 Nu doar marca este importantă.
 
@@ -160,7 +159,7 @@ Contează:
 
 ---
 
-# Probleme frecvente
+## Probleme frecvente
 
 Dacă plata e refuzată:
 
@@ -172,7 +171,7 @@ Verifică:
 
 ---
 
-# Pentru cine este util un card virtual?
+## Pentru cine este util un card virtual?
 
 - Dezvoltatori;
 - Proprietari de site-uri;
@@ -181,7 +180,7 @@ Verifică:
 
 ---
 
-# Concluzie
+## Concluzie
 
 Pentru plata Cloudflare, problema principală este adesea metoda de plată, nu serviciul în sine.
 

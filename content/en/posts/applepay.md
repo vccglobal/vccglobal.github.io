@@ -10,7 +10,6 @@ tags:
   - Virtual Credit Card
   - apple pay
 ---
-# How to Pay for Overseas App Subscriptions with Apple Pay: Virtual Visa & Mastercard Guide
 
 Paying for an overseas app subscription on an iPhone sounds simple until you actually reach the checkout screen.
 

@@ -8,7 +8,6 @@ categories:
 tags:
   - Virtual Credit Card
 ---
-# Hướng dẫn thanh toán Cloudflare Pro bằng thẻ ảo Visa và Mastercard
 
 Cloudflare hiện là một trong những nền tảng quan trọng dành cho chủ website, lập trình viên, doanh nghiệp và các dự án trực tuyến cần cải thiện tốc độ, bảo mật và độ ổn định.
 
@@ -35,7 +34,7 @@ Bài viết này sẽ phân tích cách thanh toán Cloudflare, cách sử dụn
 
 ---
 
-# Vì sao thanh toán Cloudflare có thể bị lỗi?
+## Vì sao thanh toán Cloudflare có thể bị lỗi?
 
 Cloudflare là dịch vụ dạng thuê bao.
 
@@ -45,7 +44,7 @@ Một số nguyên nhân phổ biến:
 
 ---
 
-## 1. Ngân hàng giới hạn giao dịch quốc tế
+### 1. Ngân hàng giới hạn giao dịch quốc tế
 
 Một số ngân hàng tự động chặn:
 
@@ -55,19 +54,19 @@ Một số ngân hàng tự động chặn:
 
 ---
 
-## 2. Thẻ không hỗ trợ thanh toán thuê bao
+### 2. Thẻ không hỗ trợ thanh toán thuê bao
 
 Một số loại thẻ có thể mua hàng online nhưng không phù hợp với các dịch vụ tính phí hàng tháng.
 
 ---
 
-## 3. Thông tin thanh toán không chính xác
+### 3. Thông tin thanh toán không chính xác
 
 Thông tin thẻ và thông tin Billing không khớp có thể khiến giao dịch bị từ chối.
 
 ---
 
-# Thẻ Visa Mastercard ảo là gì?
+## Thẻ Visa Mastercard ảo là gì?
 
 Thẻ ảo là một loại thẻ thanh toán kỹ thuật số dùng chủ yếu cho giao dịch trực tuyến.
 
@@ -81,9 +80,9 @@ Không cần thẻ vật lý nhưng vẫn có thể sử dụng trên các nền
 
 ---
 
-# Lợi ích khi dùng thẻ ảo cho Cloudflare
+## Lợi ích khi dùng thẻ ảo cho Cloudflare
 
-## Tách riêng chi phí dịch vụ
+### Tách riêng chi phí dịch vụ
 
 Người dùng có thể quản lý riêng:
 
@@ -95,13 +94,13 @@ Người dùng có thể quản lý riêng:
 
 ---
 
-## Kiểm soát ngân sách
+### Kiểm soát ngân sách
 
 Có thể nạp số tiền phù hợp thay vì liên kết trực tiếp với tài khoản ngân hàng chính.
 
 ---
 
-# Vì sao nên cân nhắc CoinePay?
+## Vì sao nên cân nhắc CoinePay?
 
 Nếu bạn đã có thẻ quốc tế hoạt động tốt, việc sử dụng thẻ hiện tại có thể là lựa chọn đơn giản nhất.
 
@@ -122,9 +121,9 @@ Người dùng có thể:
 
 ---
 
-# Quy trình thanh toán Cloudflare bằng thẻ ảo
+## Quy trình thanh toán Cloudflare bằng thẻ ảo
 
-## Bước 1: Kiểm tra gói Cloudflare
+### Bước 1: Kiểm tra gói Cloudflare
 
 Trước khi thanh toán, hãy xác định:
 
@@ -134,7 +133,7 @@ Trước khi thanh toán, hãy xác định:
 
 ---
 
-## Bước 2: Chuẩn bị tài khoản CoinePay
+### Bước 2: Chuẩn bị tài khoản CoinePay
 
 Sau khi đăng ký:
 
@@ -144,7 +143,7 @@ Sau khi đăng ký:
 
 ---
 
-## Bước 3: Nạp số dư
+### Bước 3: Nạp số dư
 
 Nên chuẩn bị:
 
@@ -155,7 +154,7 @@ Nên chuẩn bị:
 
 ---
 
-## Bước 4: Thêm thẻ vào Cloudflare
+### Bước 4: Thêm thẻ vào Cloudflare
 
 Vào:
 
@@ -170,7 +169,7 @@ Nhập:
 
 ---
 
-# Visa hay Mastercard tốt hơn?
+## Visa hay Mastercard tốt hơn?
 
 Không thể chỉ dựa vào tên thương hiệu để quyết định.
 
@@ -182,15 +181,15 @@ Không thể chỉ dựa vào tên thương hiệu để quyết định.
 
 ---
 
-# Nếu thanh toán Cloudflare thất bại?
+## Nếu thanh toán Cloudflare thất bại?
 
 Hãy kiểm tra:
 
-## Số dư
+### Số dư
 
 Đảm bảo đủ tiền cho toàn bộ giao dịch.
 
-## Thông tin thẻ
+### Thông tin thẻ
 
 Kiểm tra:
 
@@ -198,33 +197,33 @@ Kiểm tra:
 - Ngày hết hạn;
 - CVV.
 
-## Hỗ trợ thuê bao
+### Hỗ trợ thuê bao
 
 Xác nhận thẻ có hỗ trợ thanh toán định kỳ hay không.
 
 ---
 
-# Ai nên sử dụng thẻ ảo?
+## Ai nên sử dụng thẻ ảo?
 
-### Lập trình viên
+#### Lập trình viên
 
 Quản lý nhiều công cụ kỹ thuật.
 
-### Chủ website
+#### Chủ website
 
 Tách riêng chi phí hạ tầng.
 
-### Doanh nghiệp nhỏ
+#### Doanh nghiệp nhỏ
 
 Kiểm soát ngân sách dịch vụ online.
 
-### Người dùng SaaS quốc tế
+#### Người dùng SaaS quốc tế
 
 Có nhiều khoản đăng ký nước ngoài.
 
 ---
 
-# Kết luận
+## Kết luận
 
 Việc nâng cấp Cloudflare không chỉ phụ thuộc vào lựa chọn gói dịch vụ mà còn phụ thuộc vào phương thức thanh toán phù hợp.
 

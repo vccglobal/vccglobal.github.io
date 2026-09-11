@@ -8,7 +8,6 @@ categories:
 tags:
   - 虚拟信用卡
 ---
-# 2026 Apple Pay虚拟信用卡使用指南：Visa、Mastercard添加钱包与订阅付款方法
 
 如果只是拿一张 Visa 或 Mastercard 在网页上付款，虚拟信用卡的使用逻辑其实很简单：
 
