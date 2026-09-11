@@ -6,9 +6,9 @@ theme = 'PaperMod'
 # defaultContentLanguageInSubdir = false ⇒ 中文在站点根目录（/posts/...），
 # 其余语言各自在 /<语言代码>/ 下。原有中文链接保持不变，不会 404。
 #
-# params.noindex = true 的语言：内容尚未铺开，暂不进 sitemap，页面也带
-# <meta name="robots" content="noindex,follow">。等该语言有了文章，
-# 删掉它的 noindex 一行即可放出。
+# 全部 16 种语言均已开放索引。若某语言需要暂时撤出搜索，在它的 params 下
+# 加一行 noindex = true 即可：该语言会退出 sitemap，页面改带
+# <meta name="robots" content="noindex,follow">。
 # params.langGroup：切换器下拉面板的分组（ea 东亚 / sa 南亚 / sea 东南亚 /
 # me 中东 / eu 欧洲与美洲）。
 defaultContentLanguage = 'zh'
@@ -196,7 +196,6 @@ Virtual Credit Cards · TRX Energy Rental · Global Remittance · Payment APIs
     description = "Coinepay — tarjetas de crédito virtuales, alquiler de energía TRX, remesas globales y API de pagos"
     keywords = ["tarjeta de crédito virtual", "alquiler de energía TRX", "remesas globales", "Coinepay", "USDT"]
     langGroup = "eu"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.es.params.homeInfoParams]
       Title = "Coinepay · Pagos transfronterizos en una sola plataforma"
@@ -249,7 +248,6 @@ Tarjetas virtuales · Alquiler de energía TRX · Remesas globales · API de pag
     description = "Coinepay — cartes de crédit virtuelles, location d’énergie TRX, transferts internationaux et API de paiement"
     keywords = ["carte de crédit virtuelle", "location d’énergie TRX", "transfert international", "Coinepay", "USDT"]
     langGroup = "eu"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.fr.params.homeInfoParams]
       Title = "Coinepay · Les paiements transfrontaliers sur une seule plateforme"
@@ -302,7 +300,6 @@ Cartes virtuelles · Location d’énergie TRX · Transferts internationaux · A
     description = "Coinepay — cartões de crédito virtuais, aluguel de energia TRX, remessas globais e APIs de pagamento"
     keywords = ["cartão de crédito virtual", "aluguel de energia TRX", "remessa global", "Coinepay", "USDT"]
     langGroup = "eu"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.pt.params.homeInfoParams]
       Title = "Coinepay · Pagamentos internacionais em uma só plataforma"
@@ -355,7 +352,6 @@ Cartões virtuais · Aluguel de energia TRX · Remessas globais · APIs de pagam
     description = "Coinepay — wirtualne karty kredytowe, wynajem energii TRX, przelewy międzynarodowe i API płatnicze"
     keywords = ["wirtualna karta kredytowa", "wynajem energii TRX", "przelewy międzynarodowe", "Coinepay", "USDT"]
     langGroup = "eu"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.pl.params.homeInfoParams]
       Title = "Coinepay · Płatności transgraniczne na jednej platformie"
@@ -408,7 +404,6 @@ Karty wirtualne · Wynajem energii TRX · Przelewy międzynarodowe · API płatn
     description = "Coinepay — carduri de credit virtuale, închiriere de energie TRX, transferuri internaționale și API de plată"
     keywords = ["card de credit virtual", "închiriere energie TRX", "transfer internațional", "Coinepay", "USDT"]
     langGroup = "eu"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.ro.params.homeInfoParams]
       Title = "Coinepay · Plăți transfrontaliere pe o singură platformă"
@@ -461,7 +456,6 @@ Carduri virtuale · Închiriere de energie TRX · Transferuri internaționale ·
     description = "Coinepay — sanal kredi kartları, TRX enerji kiralama, küresel havale ve ödeme API’leri"
     keywords = ["sanal kredi kartı", "TRX enerji kiralama", "küresel havale", "Coinepay", "USDT"]
     langGroup = "me"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.tr.params.homeInfoParams]
       Title = "Coinepay · Sınır ötesi ödemeler tek platformda"
@@ -514,7 +508,6 @@ Sanal kartlar · TRX enerji kiralama · Küresel havale · Ödeme API’leri
     description = "Coinepay — バーチャルクレジットカード、TRXエナジーレンタル、国際送金、決済API"
     keywords = ["バーチャルクレジットカード", "TRXエナジーレンタル", "国際送金", "Coinepay", "USDT"]
     langGroup = "ea"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.ja.params.homeInfoParams]
       Title = "Coinepay · クロスボーダー決済をひとつのプラットフォームで"
@@ -567,7 +560,6 @@ Sanal kartlar · TRX enerji kiralama · Küresel havale · Ödeme API’leri
     description = "Coinepay — 가상 신용카드, TRX 에너지 렌탈, 해외 송금 및 결제 API"
     keywords = ["가상 신용카드", "TRX 에너지 렌탈", "해외 송금", "Coinepay", "USDT"]
     langGroup = "ea"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.ko.params.homeInfoParams]
       Title = "Coinepay · 국경 간 결제를 하나의 플랫폼에서"
@@ -620,7 +612,6 @@ Sanal kartlar · TRX enerji kiralama · Küresel havale · Ödeme API’leri
     description = "Coinepay — वर्चुअल क्रेडिट कार्ड, TRX एनर्जी रेंटल, वैश्विक धन प्रेषण और भुगतान API"
     keywords = ["वर्चुअल क्रेडिट कार्ड", "TRX एनर्जी रेंटल", "वैश्विक धन प्रेषण", "Coinepay", "USDT"]
     langGroup = "sa"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.hi.params.homeInfoParams]
       Title = "Coinepay · सीमा-पार भुगतान, एक ही मंच पर"
@@ -673,7 +664,6 @@ Sanal kartlar · TRX enerji kiralama · Küresel havale · Ödeme API’leri
     description = "Coinepay — ভার্চুয়াল ক্রেডিট কার্ড, TRX এনার্জি ভাড়া, বৈশ্বিক রেমিট্যান্স ও পেমেন্ট API"
     keywords = ["ভার্চুয়াল ক্রেডিট কার্ড", "TRX এনার্জি ভাড়া", "বৈশ্বিক রেমিট্যান্স", "Coinepay", "USDT"]
     langGroup = "sa"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.bn.params.homeInfoParams]
       Title = "Coinepay · সীমান্ত পার লেনদেন, এক প্ল্যাটফর্মে"
@@ -727,7 +717,6 @@ Sanal kartlar · TRX enerji kiralama · Küresel havale · Ödeme API’leri
     description = "Coinepay — ورچوئل کریڈٹ کارڈز، TRX انرجی کرایہ، عالمی ترسیلاتِ زر اور ادائیگی API"
     keywords = ["ورچوئل کریڈٹ کارڈ", "TRX انرجی کرایہ", "عالمی ترسیلاتِ زر", "Coinepay", "USDT"]
     langGroup = "sa"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.ur.params.homeInfoParams]
       Title = "Coinepay · سرحد پار ادائیگیاں، ایک ہی پلیٹ فارم پر"
@@ -781,7 +770,6 @@ Sanal kartlar · TRX enerji kiralama · Küresel havale · Ödeme API’leri
     description = "Coinepay — بطاقات ائتمان افتراضية، تأجير طاقة TRX، تحويلات مالية عالمية وواجهات دفع برمجية"
     keywords = ["بطاقة ائتمان افتراضية", "تأجير طاقة TRX", "تحويلات مالية عالمية", "Coinepay", "USDT"]
     langGroup = "me"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.ar.params.homeInfoParams]
       Title = "Coinepay · المدفوعات العابرة للحدود على منصة واحدة"
@@ -834,7 +822,6 @@ Sanal kartlar · TRX enerji kiralama · Küresel havale · Ödeme API’leri
     description = "Coinepay — บัตรเครดิตเสมือน เช่าพลังงาน TRX โอนเงินระหว่างประเทศ และ API ชำระเงิน"
     keywords = ["บัตรเครดิตเสมือน", "เช่าพลังงาน TRX", "โอนเงินระหว่างประเทศ", "Coinepay", "USDT"]
     langGroup = "sea"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.th.params.homeInfoParams]
       Title = "Coinepay · การชำระเงินข้ามพรมแดนในแพลตฟอร์มเดียว"
@@ -887,7 +874,6 @@ Sanal kartlar · TRX enerji kiralama · Küresel havale · Ödeme API’leri
     description = "Coinepay — thẻ tín dụng ảo, thuê năng lượng TRX, chuyển tiền quốc tế và API thanh toán"
     keywords = ["thẻ tín dụng ảo", "thuê năng lượng TRX", "chuyển tiền quốc tế", "Coinepay", "USDT"]
     langGroup = "sea"
-    noindex = true          # 暂不进 sitemap；有文章后删掉本行
 
     [languages.vi.params.homeInfoParams]
       Title = "Coinepay · Thanh toán xuyên biên giới trên một nền tảng"
