@@ -3,6 +3,10 @@ title: 2026 OnlyFans虚拟信用卡订阅指南：Visa、Mastercard卡绑定流�
 slug: onlyfans
 date: 2026-09-11
 draft: false
+categories:
+  - 虚拟信用卡
+tags:
+  - 虚拟信用卡
 ---
 随着海外数字服务和线上订阅平台的发展，越来越多用户需要使用国际支付方式完成会员购买、软件订阅以及数字内容消费。
 
